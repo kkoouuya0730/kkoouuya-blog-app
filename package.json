@@ -5,10 +5,14 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "fix": "npm run format && npm run lint",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "tsconfig": "*",
     "turbo": "latest"
@@ -17,5 +21,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "lint-staged": {
+    "**/*.{js,ts,css,scss,vue}": "npm run fix"
+  }
 }
