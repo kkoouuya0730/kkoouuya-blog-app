@@ -12,6 +12,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@nuxt/ui": "^2.12.3",
     "ui": "*"
   },
   "devDependencies": {
