@@ -2,4 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/ui", "@nuxt/image"],
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false, // 名前に基づいてコンポーネントを自動インポートさせる
+    },
+  ],
 });
