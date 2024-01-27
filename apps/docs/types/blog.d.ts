@@ -11,3 +11,9 @@ export type BlogType = {
   summary: string;
   tag: BadgeType[];
 };
+
+export type NavType = {
+  title: string;
+  slag: string;
+  isIcon: boolean;
+};
