@@ -12,6 +12,7 @@ const blogs = [
       {
         label: "React",
         color: "primary",
+        isList: false,
       },
     ],
   },

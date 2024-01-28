@@ -1,6 +1,8 @@
 export type BadgeType = {
   label: string;
   color: string;
+  isList: boolean;
+  amount?: number;
 };
 
 export type BlogType = {
