@@ -18,4 +18,6 @@ export type NavType = {
   title: string;
   slag: string;
   isIcon: boolean;
+  iconName?: string;
+  isExternalLink?: boolean;
 };

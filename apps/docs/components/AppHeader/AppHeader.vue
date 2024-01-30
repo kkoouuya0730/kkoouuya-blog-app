@@ -15,34 +15,27 @@ const navs = [
     slag: "/tag",
     isIcon: false,
   },
-  {
-    title: "Recap",
-    slag: "/recap",
-    isIcon: false,
-  },
 ];
 
 const snsNav = [
   {
-    title: "Blog",
+    title: "Light and Dark",
     slag: "",
     isIcon: true,
+    iconName: "tabler:sun-moon",
   },
   {
-    title: "About",
-    slag: "",
+    title: "Github",
+    slag: "https://github.com/kkoouuya0730",
     isIcon: true,
-  },
-  {
-    title: "Tag",
-    slag: "",
-    isIcon: true,
+    iconName: "uil:github",
+    isExternalLink: true,
   },
 ];
 </script>
 
 <template>
-  <div class="flex h-12 items-center justify-between px-7">
+  <div class="flex h-12 items-center justify-between p-7">
     <NuxtLink to="/blog">
       <span class="text-lg font-medium">kkoouuyaのテックブログ</span>
     </NuxtLink>
