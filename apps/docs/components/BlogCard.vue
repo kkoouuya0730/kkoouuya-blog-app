@@ -12,7 +12,7 @@ defineProps<Props>();
   <article>
     <UCard>
       <template #header>
-        <NuxtLink :to="BlogInfo.slag">
+        <NuxtLink :to="`/blog/${BlogInfo.slag}`">
           <NuxtImg format="webp" :src="BlogInfo.thumnail" />
         </NuxtLink>
       </template>
@@ -28,11 +28,11 @@ defineProps<Props>();
       </p>
 
       <template #footer class="h-6">
-        <ul
-          class="flex flex-wrap space-x-1 gap-1"
-          v-for="tagBadgeInfo in BlogInfo.tag"
-        >
-          <TagBadge :-badge-info="tagBadgeInfo" />
+        <ul class="flex flex-wrap space-x-1 gap-1">
+          <TagBadge
+            v-for="tagBadgeInfo in BlogInfo.tag"
+            :-badge-info="tagBadgeInfo"
+          />
         </ul>
       </template>
     </UCard>
