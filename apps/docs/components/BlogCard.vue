@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { BlogType } from "@/types/blog";
+import type { Blog } from "@/types/blog";
 
 type Props = {
-  BlogInfo: BlogType;
+  BlogInfo: Blog;
 };
 
 defineProps<Props>();
