@@ -1,20 +1,20 @@
-export type BadgeType = {
+export type Badge = {
   label: string;
   color: string;
   isList: boolean;
   amount?: number;
 };
 
-export type BlogType = {
+export type Blog = {
   title: string;
   slag: string;
   thumnail: string;
   publishedAt: string; // TODO Dateにする
   summary: string;
-  tag: BadgeType[];
+  tag: Badge[];
 };
 
-export type NavType = {
+export type Nav = {
   title: string;
   slag: string;
   isIcon: boolean;

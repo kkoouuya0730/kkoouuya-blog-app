@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { NavType } from "~/types/blog";
+import type { Nav } from "@/types/blog";
 
 type Props = {
-  NavInfo: NavType[];
+  NavInfo: Nav[];
 };
 
 defineProps<Props>();
 
 const route = useRoute();
 // TODO 今は1つだけしかクラスがいらないけど、将来増えたら切り出す
-const currentPage = (navInfo: NavType) => {
+const currentPage = (navInfo: Nav) => {
   const [, currentPath] = route.path.split("/");
   const [, currentSlug] = navInfo.slag.split("/");
   return currentPath === currentSlug ? "border-b-2 border-red-500" : "";

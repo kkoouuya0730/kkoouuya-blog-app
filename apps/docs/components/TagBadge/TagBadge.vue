@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { BadgeType } from "@/types/blog";
+import type { Badge } from "@/types/blog";
 
 type Props = {
-  BadgeInfo: BadgeType;
+  BadgeInfo: Badge;
 };
 
 defineProps<Props>();
