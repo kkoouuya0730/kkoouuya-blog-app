@@ -15,9 +15,7 @@ export type Blog = {
 };
 
 export type Nav = {
-  title: string;
   slag: string;
-  isIcon: boolean;
   iconName?: string;
   isExternalLink?: boolean;
 };
