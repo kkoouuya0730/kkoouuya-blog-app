@@ -1,37 +1,5 @@
 <script setup lang="ts">
-const navs = [
-  {
-    title: "Blog",
-    slag: "/blog",
-    isIcon: false,
-  },
-  {
-    title: "About",
-    slag: "/about",
-    isIcon: false,
-  },
-  {
-    title: "Tag",
-    slag: "/tag",
-    isIcon: false,
-  },
-];
-
-const snsNav = [
-  {
-    title: "Light and Dark",
-    slag: "",
-    isIcon: true,
-    iconName: "tabler:sun-moon",
-  },
-  {
-    title: "Github",
-    slag: "https://github.com/kkoouuya0730",
-    isIcon: true,
-    iconName: "uil:github",
-    isExternalLink: true,
-  },
-];
+const navs = ["/blog", "/about", "/tags"];
 </script>
 
 <template>
@@ -43,7 +11,13 @@ const snsNav = [
       <AppNav :-nav-info="navs" />
     </div>
     <div>
-      <AppNav :-nav-info="snsNav" />
+      <a
+        href="https://github.com/kkoouuya0730"
+        target="_blank"
+        aria-label="GitHub"
+      >
+        <Github />
+      </a>
     </div>
   </div>
 </template>

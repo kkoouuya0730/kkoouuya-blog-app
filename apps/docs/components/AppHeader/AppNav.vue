@@ -1,37 +1,26 @@
 <script setup lang="ts">
-import type { Nav } from "@/types/blog";
+import { capitalizeFirstLetter } from "../../utils/arrangeString";
 
 type Props = {
-  NavInfo: Nav[];
+  NavInfo: string[];
 };
 
 defineProps<Props>();
 
 const route = useRoute();
 // TODO 今は1つだけしかクラスがいらないけど、将来増えたら切り出す
-const currentPage = (navInfo: Nav) => {
+const currentPage = (navInfo: string) => {
   const [, currentPath] = route.path.split("/");
-  const [, currentSlug] = navInfo.slag.split("/");
+  const [, currentSlug] = navInfo.split("/");
   return currentPath === currentSlug ? "border-b-2 border-red-500" : "";
 };
 </script>
 
 <template>
-  <nav class="flex space-x-2">
-    <ul>
-      <NuxtLink
-        v-for="nav in NavInfo"
-        class="p-1"
-        :to="nav.slag"
-        :class="currentPage(nav)"
-        :target="nav.isExternalLink ? '_blank' : ''"
-      >
-        <Icon
-          v-if="nav.isIcon"
-          size="35px"
-          :name="nav.iconName ? nav.iconName : ''"
-        />
-        <span v-else>{{ nav.title }}</span>
+  <nav>
+    <ul class="flex space-x-10">
+      <NuxtLink v-for="nav in NavInfo" :to="nav" :class="currentPage(nav)">
+        <span>{{ capitalizeFirstLetter(nav.slice(1)) }}</span>
       </NuxtLink>
     </ul>
   </nav>
