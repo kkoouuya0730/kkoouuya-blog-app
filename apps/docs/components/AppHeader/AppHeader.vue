@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const navs = ["/blog", "/about", "/tags"];
+const navs = ["/blog", "/about", "/tag"];
 </script>
 
 <template>
